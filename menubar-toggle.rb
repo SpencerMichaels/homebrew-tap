@@ -4,8 +4,6 @@ class MenubarToggle < Formula
   url "https://github.com/sxmichaels/menubar-toggle/archive/1.0.1.tar.gz"
   sha256 "7803749b6da1fde073226d7a02f0cef5a41066cd2d88eaef7d775bf3246c0b13"
 
-  depends_on MacOS.version: >= :el_capitan
-
   def install
     system "./build"
     bin.install "menubar-toggle"

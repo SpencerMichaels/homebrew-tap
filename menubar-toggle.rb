@@ -1,12 +1,12 @@
 class MenubarToggle < Formula
   desc "Toggle the OSX menubar's autohide setting from the command-line."
   homepage "https://github.com/sxmichaels/menubar-toggle"
-  url "https://github.com/sxmichaels/menubar-toggle/archive/1.0.1.tar.gz"
-  sha256 "7803749b6da1fde073226d7a02f0cef5a41066cd2d88eaef7d775bf3246c0b13"
+  url "https://github.com/sxmichaels/menubar-toggle/archive/2.0.0.tar.gz"
+  sha256 "318c3d2122c3acde1afaf2570a3e7b938cc80bff4761ecc4177b1d659e18edf3"
 
   def install
-    system "./build"
-    bin.install "menubar-toggle"
+    system "swift build --configuration release"
+    bin.install "./.build/release/menubar-toggle"
   end
 
   test do

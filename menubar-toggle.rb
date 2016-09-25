@@ -8,6 +8,7 @@ class MenubarToggle < Formula
   depends_on "swift"
 
   def install
+    ENV.append "LDFLAGS", "-L/usr/local/opt/swift/lib"
     system "swift build --configuration release"
     bin.install "./.build/release/menubar-toggle"
   end

@@ -5,6 +5,7 @@ class MenubarToggle < Formula
   sha256 "318c3d2122c3acde1afaf2570a3e7b938cc80bff4761ecc4177b1d659e18edf3"
 
   depends_on :macos => :el_capitan
+  depends_on "swift"
 
   def install
     system "swift build --configuration release"

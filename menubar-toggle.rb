@@ -1,9 +1,10 @@
 class MenubarToggle < Formula
   desc "Toggle the OSX menubar's autohide setting from the command-line."
   homepage "https://github.com/sxmichaels/menubar-toggle"
-  url "https://github.com/sxmichaels/menubar-toggle/archive/2.0.0.tar.gz"
-  sha256 "318c3d2122c3acde1afaf2570a3e7b938cc80bff4761ecc4177b1d659e18edf3"
+  url "https://github.com/sxmichaels/menubar-toggle/archive/2.0.1.tar.gz"
+  sha256 "03cbc4a97a2e20b7f402073894c71ba8587e94c04527a7f305b0fd88ec834e54"
 
+  # Only OS X El Capitan and newer support the menubar auto-hide functionality
   depends_on :macos => :el_capitan
 
   def install

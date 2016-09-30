@@ -12,14 +12,5 @@ cask 'menubar-toggle-cask' do
   # Only OS X El Capitan and newer support the menubar auto-hide functionality
   depends_on macos: '>= :el_capitan'
 
-  binary "."
-
-#  def install
-#    bin.install,"menubar-toggle"
-#  end
-
-  test do
-    system "#{bin}/menubar-toggle", "--version"
-  end
-
+  binary "menubar-toggle"
 end

@@ -1,2 +1,2 @@
 # homebrew-tap
-Homebrew formulae for my projects.
+Homebrew formulae for projects I am helping with.

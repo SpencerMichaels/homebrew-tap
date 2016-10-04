@@ -6,8 +6,10 @@ class MenubarToggle < Formula
 
   # Only OS X El Capitan and newer support the menubar auto-hide functionality
   depends_on :macos => :el_capitan
+  depends_on "swift"
 
   def install
+    ENV.append "LDFLAGS", "-L/usr/local/opt/swift/lib"
     system "swift build --configuration release"
     bin.install "./.build/release/menubar-toggle"
   end

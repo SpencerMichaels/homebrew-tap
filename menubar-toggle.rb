@@ -8,7 +8,7 @@ class MenubarToggle < Formula
   depends_on :macos => :el_capitan
 
   def install
-    system "swift build --configuration release"
+    system "swift build --disable-sandbox --configuration release"
     bin.install "./.build/release/menubar-toggle"
   end
 
